@@ -1,0 +1,20 @@
+<template name="questionnaireImageGridPage">
+  <article id="questionnaireImageGridPage" class="page">
+    {{> recordHeader type="questionnaire"}}
+    <div class="pageBody" style="{{getOpacity}}">
+      <input id="questionnaireSearchInput" type="text" class="glass fullwidth form-control" placeholder="search..." />
+
+      <ul id="questionnaireImageGrid">
+        {{#each lists}}
+          <li>
+            <img class="questionnaireImage" src="{{imageUrl}}" />
+          </li>
+        {{/each}}
+        <li id="addNewQuestionnaire" class="addNewQuestionnaire">
+            <img class="questionnaireImage" src="{{imageUrl}}" />
+        </li>
+      </ul>
+    </div>
+    {{> recordFooter }}
+  </article>
+</template>

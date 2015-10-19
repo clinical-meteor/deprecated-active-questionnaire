@@ -1,0 +1,34 @@
+
+<template name="questionnairesListPage">
+  <article id="questionnairesListPage" class="page fizzle">
+    {{> recordHeader type="questionnaire"}}
+    <div class="pageBody" style="{{getOpacity}}">
+      <input id="questionnaireSearchInput" type="text" class="glass fullwidth form-control" placeholder="search..." value="{{getQuestionnaireSearchFilter}}"/>
+      <ul id="questionnairesList">
+        {{#if hasNoContent}}
+          <li id="noResultsMessage" class="addQuestionnaireItem">
+            <article class="noResultsMessage">
+              <span>There are no results!  Click to add one.</span>
+            </article>
+            <div class="fadeAway"></div>
+          </li>
+
+        {{else}}
+          {{#each questionnairesList}}
+            <li class="questionnaireItem">
+              <article>
+                <h2 class="questionnaireName titleText">{{questionnaireName}}</h2>
+                <span class="pull-right barcode gray idText">{{_id}}</span><br>
+                <!-- <span class="institutionName">{{institutionId}}</span> -->
+                <span class="descriptionText">{{institutionId}}</span>
+                <span class="pull-right newLink">New</span>
+              </article>
+              <div class="fadeAway"></div>
+            </li>
+          {{/each}}
+        {{/if}}
+      </ul>
+    </div>
+    {{> recordFooter }}
+  </article>
+</template>
