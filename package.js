@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:active-questionnaire',
-  version: '1.0.7',
+  version: '1.0.8',
   summary: 'ActiveQuestionnaire component for the ClinicalFramework; provides CRUD pattern using Autoform.',
   git: 'http://github.com/clinical-meteor/active-questionnaire',
   documentation: 'README.md'
@@ -17,6 +17,8 @@ Package.onUse(function (api) {
   api.use('photonic:active-record-core@0.0.2');
   api.use('photonic:active-record-header@0.0.4');
   api.use('photonic:active-record-footer@0.0.4');
+
+  //api.use('clinical:active-record@1.0.12');
 
   api.imply('aldeed:simple-schema@1.3.3');
   api.imply('aldeed:collection2@2.3.3');

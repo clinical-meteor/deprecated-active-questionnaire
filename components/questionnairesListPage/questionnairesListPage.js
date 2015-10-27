@@ -15,13 +15,28 @@ Router.map(function () {
     template: 'questionnairesListPage'
   });
 });
-
+Router.route('/questionnaire/:questionnaireId/new', {
+  name: 'recordUpsertForTemplate',
+  template: 'recordUpsertPage',
+  data: function (){
+    return Questionnaires.findOne({_id: this.params.questionnaireId});
+  }
+});
 
 //------------------------------------------------------------------------------
 // TEMPLATE INPUTS
 
 Template.questionnairesListPage.events({
-  'change #questionnaireSearchInput': function(){
+  "click .listButton": function (event, template){
+    Router.go('/list/questionnaires');
+  },
+  "click .imageGridButton": function (event, template){
+    Router.go('/grid/questionnaires');
+  },
+  "click .tableButton": function (event, template){
+    Router.go('/table/questionnaires');
+  },
+  'change #questionnaireSearchInput': function (){
     Session.set('questionnaireSearchFilter', $('#questionnaireSearchInput').val());
   },
   'click .newLink': function (event, template) {

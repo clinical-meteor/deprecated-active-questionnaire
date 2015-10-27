@@ -21,6 +21,15 @@ Router.map(function(){
 // TEMPLATE INPUTS
 
 Template.questionnairesTablePage.events({
+  "click .listButton": function (event, template){
+    Router.go('/list/questionnaires');
+  },
+  "click .imageGridButton": function (event, template){
+    Router.go('/grid/questionnaires');
+  },
+  "click .tableButton": function (event, template){
+    Router.go('/table/questionnaires');
+  },
   'click .starA': function(event, template){
     event.stopPropagation();
     Questionnaires.update({_id: this._id}, {$set: {stars: 1}});
