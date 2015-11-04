@@ -1,6 +1,6 @@
 Package.describe({
   name: 'clinical:active-questionnaire',
-  version: '1.0.8',
+  version: '1.0.9',
   summary: 'ActiveQuestionnaire component for the ClinicalFramework; provides CRUD pattern using Autoform.',
   git: 'http://github.com/clinical-meteor/active-questionnaire',
   documentation: 'README.md'
