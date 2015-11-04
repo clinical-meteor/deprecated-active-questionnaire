@@ -10,7 +10,6 @@ Package.onUse(function (api) {
   api.versionsFrom('1.1.0.2');
 
   api.use('meteor-platform');
-  api.use('iron:router@1.0.7');
   api.use('grove:less@0.1.1');
   api.use('photonic:glass-ui@0.2.4');
 
@@ -18,10 +17,10 @@ Package.onUse(function (api) {
   api.use('photonic:active-record-header@0.0.4');
   api.use('photonic:active-record-footer@0.0.4');
 
-  //api.use('clinical:active-record@1.0.12');
-
   api.imply('aldeed:simple-schema@1.3.3');
   api.imply('aldeed:collection2@2.3.3');
+
+  api.use('clinical:router@2.0.13');
 
   api.addFiles([
     'components/questionnairesListPage/questionnairesListPage.html',

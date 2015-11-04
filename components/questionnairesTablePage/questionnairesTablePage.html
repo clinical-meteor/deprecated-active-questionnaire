@@ -1,7 +1,8 @@
 
 <template name="questionnairesTablePage">
   <article id="questionnairesTablePage" class="page">
-    {{> recordHeader}}
+    {{> recordHeader url="questionnaires" spreadsheet=false}}
+
     <div class="pageBody" style="{{getOpacity}}">
       <input id="questionnaireSearchInput" type="text" class="glass fullwidth form-control" placeholder="search..." />
 

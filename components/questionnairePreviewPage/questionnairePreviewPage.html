@@ -1,12 +1,6 @@
 <template name="questionnairePreviewPage">
   <div id="questionnairePreviewPage" class="fullheight padded page">
-    <header class="pageHeader">
-      <i class="indexButton fa fa-chevron-left"></i>
-      <h4 class="questionnaireId barcode">{{_id}}</h4>
-      <i class="imageGridButton fa fa-th"></i>
-      <i class="listButton fa fa-list"></i>
-      <i class="tableButton fa fa-table"></i>
-    </header>
+    {{> recordHeader type="record" url="questionnaires" spreadsheet=false}}
 
       <div id="questionnairePreviewCard" class="card-contents">
         <h2 id="questionnaireTitleText">{{title}}</h2>

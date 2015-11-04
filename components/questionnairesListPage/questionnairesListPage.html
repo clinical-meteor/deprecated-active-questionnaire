@@ -1,7 +1,8 @@
 
 <template name="questionnairesListPage">
   <article id="questionnairesListPage" class="page fizzle">
-    {{> recordHeader type="questionnaire"}}
+    {{> recordHeader type="questionnaire" spreadsheet=false}}
+
     <div class="pageBody" style="{{getOpacity}}">
       <input id="questionnaireSearchInput" type="text" class="glass fullwidth form-control" placeholder="search..." value="{{getQuestionnaireSearchFilter}}"/>
       <ul id="questionnairesList">
